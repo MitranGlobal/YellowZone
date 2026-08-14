@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --shell-pad: clamp(1.25rem, 4vw, 2.75rem);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-paper text-ink font-sans antialiased;
+    font-feature-settings: 'kern' 1, 'liga' 1;
+  }
+
+  ::selection {
+    background: #f6e8c2;
+    color: #0c3a66;
+  }
+
+  :focus-visible {
+    outline: 2px solid #c08a1e;
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-display;
+    font-weight: 400;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  .shell {
+    @apply mx-auto w-full max-w-shell;
+    padding-left: var(--shell-pad);
+    padding-right: var(--shell-pad);
+  }
+
+  /* Eyebrow: mono, tracked, with a short gold tick. Used as the standing
+     section marker across the site. */
+  .eyebrow {
+    @apply font-mono text-eyebrow uppercase text-gold-deep;
+  }
+
+  .rule-gold {
+    @apply h-px w-full origin-left bg-gold-rule;
+  }
+
+  .link-underline {
+    @apply relative inline-flex items-center gap-1.5 text-ink transition-colors hover:text-gold-deep;
+  }
+
+  .link-underline::after {
+    content: '';
+    @apply absolute -bottom-0.5 left-0 h-px w-full origin-right scale-x-0 bg-gold transition-transform duration-300;
+  }
+
+  .link-underline:hover::after {
+    @apply origin-left scale-x-100;
+  }
+
+  /* Hairline card — the standard's dominant surface. White, ruled, no shadow. */
+  .card {
+    @apply border border-rule bg-paper transition-colors duration-300;
+  }
+
+  .card-hover:hover {
+    @apply border-gold/60;
+  }
+
+  .stamp {
+    @apply inline-flex items-center gap-1.5 border px-2 py-1 font-mono text-[0.625rem] uppercase tracking-[0.14em];
+  }
+
+  .stamp-mandatory {
+    @apply border-gold-deep/40 bg-gold-pale/40 text-gold-ink;
+  }
+
+  .stamp-recommended {
+    @apply border-ink/20 bg-parchment text-ink-soft;
+  }
+
+  .prose-standard p {
+    @apply text-lede text-ink-soft;
+  }
+
+  .prose-standard p + p {
+    @apply mt-5;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-pretty {
+    text-wrap: pretty;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
