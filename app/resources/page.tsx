@@ -10,7 +10,7 @@ import { DOWNLOADS } from '@/lib/site';
 export const metadata: Metadata = {
   title: 'Resources & FAQ',
   description:
-    'Download the YellowZone criteria and self-assessment checklist, and read answers to the questions schools ask most.',
+    'Download the YellowZone criteria and readiness checklist, and read answers to the questions schools ask most.',
 };
 
 export default function ResourcesPage() {
@@ -18,7 +18,7 @@ export default function ResourcesPage() {
     <>
       <PageHero
         eyebrow="Resources"
-        title="Everything your school needs before applying"
+        title="Everything your school needs to get started"
         lede={
           <p>
             The criteria in full, a checklist to work through offline, and
@@ -113,7 +113,7 @@ export default function ResourcesPage() {
               }
             />
             <div className="mt-9">
-              <Button href="/apply">Contact the certification team</Button>
+              <Button href="/contact">Contact the certification team</Button>
             </div>
           </Reveal>
         </div>

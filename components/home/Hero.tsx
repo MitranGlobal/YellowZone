@@ -40,7 +40,7 @@ export default function Hero() {
             className="mt-11 flex flex-wrap gap-3 animate-fade-up"
             style={{ animationDelay: '270ms' }}
           >
-            <Button href="/apply">Apply for Certification</Button>
+            <Button href="/contact">Talk to Us</Button>
             <Button href="/criteria" variant="secondary">
               See the Criteria
             </Button>

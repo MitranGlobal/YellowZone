@@ -5,7 +5,7 @@ import SectionHeading from '@/components/ui/SectionHeading';
 import Reveal from '@/components/ui/Reveal';
 import Button from '@/components/ui/Button';
 import { TIERS } from '@/lib/tiers';
-import { MANDATORY_COUNT } from '@/lib/criteria';
+import { MANDATORY_COUNT, RECOMMENDED_COUNT } from '@/lib/criteria';
 
 export const metadata: Metadata = {
   title: 'Certified Schools',
@@ -73,7 +73,7 @@ export default function CertifiedSchoolsPage() {
                 </p>
 
                 <div className="mt-10 flex flex-wrap justify-center gap-3">
-                  <Button href="/apply">Register your interest</Button>
+                  <Button href="/contact">Talk to us</Button>
                   <Button href="/criteria" variant="secondary">
                     Review the criteria
                   </Button>
@@ -125,7 +125,7 @@ export default function CertifiedSchoolsPage() {
                         <div className="flex justify-between gap-4">
                           <dt>Recommended met</dt>
                           <dd className="text-ink">
-                            {school.recommendedMet} of 5
+                            {school.recommendedMet} of {RECOMMENDED_COUNT}
                           </dd>
                         </div>
                       </dl>

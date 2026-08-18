@@ -19,7 +19,7 @@ const NOT = [
   },
   {
     title: 'It is not a workshop or a training package.',
-    body: 'Training is something the school must already be doing. We verify that it happened; we do not sell it as the certification.',
+    body: 'We support training as part of getting a school to the standard, but the certification is the verified outcome — not the sessions delivered along the way.',
   },
   {
     title: 'It is not permanent.',
@@ -27,7 +27,7 @@ const NOT = [
   },
   {
     title: 'It is not a paid badge.',
-    body: 'Schools that miss the Mandatory gate are not certified, whatever they have paid to be assessed.',
+    body: 'We help schools reach the standard — but the seal is only issued once the Mandatory criteria are genuinely met and verified. A mark that could not be withheld would signal nothing.',
   },
 ];
 
@@ -105,7 +105,7 @@ export default function WhatIsPage() {
           <Reveal>
             <SectionHeading
               eyebrow="Levels of award"
-              title="One gate, five levels"
+              title="One gate, three levels"
               lede={
                 <p>
                   Clearing the Mandatory gate is what makes a school certified.

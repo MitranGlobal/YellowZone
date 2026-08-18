@@ -3,7 +3,21 @@
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { TIERS } from '@/lib/tiers';
+import { MANDATORY_COUNT } from '@/lib/criteria';
 import { useLightbox } from '@/store/lightbox';
+
+/**
+ * Tailwind scans source statically, so column counts must appear as literal
+ * class strings. This map covers every count the tier system can produce as
+ * levels are enabled or held back in lib/tiers.ts.
+ */
+const COLS: Record<number, string> = {
+  1: 'lg:grid-cols-1',
+  2: 'lg:grid-cols-2',
+  3: 'lg:grid-cols-3',
+  4: 'lg:grid-cols-4',
+  5: 'lg:grid-cols-5',
+};
 
 const ITEMS = TIERS.map((t) => ({
   src: t.seal,
@@ -30,7 +44,7 @@ export default function TierLadder() {
         <div className="absolute inset-y-0 left-0 w-full bg-gold-rule opacity-70" />
       </div>
 
-      <ul className="grid gap-px bg-rule sm:grid-cols-2 lg:grid-cols-5">
+      <ul className={`grid gap-px bg-rule sm:grid-cols-2 ${COLS[TIERS.length] ?? "lg:grid-cols-3"}`}>
         {TIERS.map((tier, i) => (
           <motion.li
             key={tier.key}
@@ -80,9 +94,9 @@ export default function TierLadder() {
       </ul>
 
       <p className="mt-8 max-w-prose font-mono text-[0.66rem] leading-relaxed tracking-[0.04em] text-ink-mute">
-        All five levels require the full Mandatory gate — 8 of 8 criteria met.
-        A school that misses any Mandatory criterion is not certified at any
-        level.
+        Every level requires the full Mandatory gate — {MANDATORY_COUNT} of{' '}
+        {MANDATORY_COUNT} criteria met. Schools are not expected to arrive
+        there; we plan the gaps and work through them with you.
       </p>
     </div>
   );

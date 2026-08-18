@@ -206,7 +206,7 @@ export default function AboutPage() {
               </p>
             </div>
             <div className="mt-10 flex flex-wrap gap-3">
-              <Button href="/apply">Partner with us</Button>
+              <Button href="/contact">Partner with us</Button>
               <Button href="/criteria" variant="secondary">
                 See the criteria
               </Button>

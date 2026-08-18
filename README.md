@@ -100,8 +100,25 @@ All five seals live in `public/logos/`.
 
 - **`yellow-zone-classic.svg`** — the standing mark. Nav, footer, hero, favicon,
   empty states, confirmation screens.
-- **`yellow-zone-{bronze,silver,gold,platinum}.svg`** — the tier system only.
-  Rendered by `components/tiers/TierLadder.tsx` and the self-assessment result.
+- **`yellow-zone-{silver,gold}.svg`** — the two live award levels above
+  Certified. Rendered by `components/tiers/TierLadder.tsx` and the
+  self-assessment result.
+- **`yellow-zone-{bronze,platinum}.svg`** — defined but **held back**. Artwork
+  stays in the repo so they can be switched on at any time.
+
+### Turning Bronze and Platinum back on
+
+Open `lib/tiers.ts` and flip `enabled: false` to `true` on either entry. That is
+the whole change. Bands, the ladder grid, the self-assessment result and every
+count on the site are derived from whichever levels are enabled:
+
+| Levels live | Bands |
+|---|---|
+| Certified · Silver · Gold *(current)* | 0–2 · 3 · 4+ |
+| All five | 0–1 · 2 · 3 · 4 · 5 |
+
+Thresholds are deliberately stored at their five-level values, so the original
+ladder snaps back exactly when the hidden levels return.
 
 ### One change made to the supplied SVGs
 
@@ -155,18 +172,47 @@ import `MANDATORY_COUNT` / `RECOMMENDED_COUNT`.
 
 ---
 
+## The independence question — worth a decision, not a default
+
+The site now says two things at once: **we help schools reach the criteria**,
+and **we decide whether they met them.** That is the auditor-consultant conflict,
+and it is the single thing most likely to stop CBSE/ICSE boards, a partner like
+the Live Love Laugh Foundation, or a discerning parent from treating the seal as
+meaningful.
+
+For contrast: USGBC writes LEED, but **GBCI** — a separate body — reviews and
+awards it, and LEED consultants are explicitly not the reviewers. NABH accredits;
+it does not sell hospitals the fix.
+
+This is not a reason to abandon the consultative model, which is genuinely the
+right call for a market where almost no school could self-certify today. It is a
+reason to separate the two roles before the first award, while it costs nothing:
+
+- **Minimum viable:** the person who advises a school is never the person who
+  verifies it. Document this and say so publicly.
+- **Stronger:** an independent review panel — external clinicians, academics, a
+  partner NGO — signs off every certification decision.
+- **Strongest:** advisory sits under MiTran Global; certification sits under a
+  separately governed YellowZone council.
+
+Until one of these exists, avoid claiming the standard is "independent" anywhere
+in copy. The current wording says *verified*, which is defensible; *independent*
+would not be.
+
 ## ⚠ Open items before launch
 
 These are decisions only you can make. Each is a real judgement call, not a
 placeholder to delete.
 
-1. **Level bands need sign-off.** The site currently awards levels by how many
-   Recommended criteria are met on top of the full Mandatory gate:
-   Certified 0–1 · Bronze 2 · Silver 3 · Gold 4 · Platinum 5. This uses all five
-   supplied seals and mirrors LEED's prerequisites-then-points shape, but your
-   content brief lists the threshold as unresolved ("3 of 5"). **Set these in
+1. **Level bands need sign-off.** Three levels are live — Certified (0–2
+   Recommended) · Silver (3) · Gold (4+) — all on top of the full Mandatory
+   gate. Bronze and Platinum are defined but held back. **Set thresholds in
    `lib/tiers.ts`.**
-2. **Testimonials are placeholder.** `components/home/Testimonials.tsx` contains
+2. **Contact details are placeholder.** `SITE.phone`, `SITE.whatsapp` and
+   `SITE.address` in `lib/site.ts` are dummy values. These are now the *only*
+   route into the programme — there is no form — so they must be real and
+   monitored before launch.
+3. **Testimonials are placeholder.** `components/home/Testimonials.tsx` contains
    unattributed sample quotes, labelled as such in the file. Replace with
    signed, permissioned quotes from the first certified cohort — or remove the
    section — before launch. Do not ship the placeholders.

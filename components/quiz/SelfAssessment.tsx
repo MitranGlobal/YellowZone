@@ -164,19 +164,19 @@ export default function SelfAssessment() {
 
               <div className="min-w-0">
                 <p className="font-mono text-[0.62rem] uppercase tracking-[0.18em] text-gold-ink">
-                  Indicative result — not a certification decision
+                  Where you stand today — not a certification decision
                 </p>
 
                 <h3 className="mt-4 font-display text-title tracking-tight text-ink">
                   {result.tier
                     ? `On this evidence, your school tracks to ${result.tier.name}.`
-                    : 'Your school does not yet clear the Mandatory gate.'}
+                    : 'There is ground to cover — and this is where we come in.'}
                 </h3>
 
                 <p className="mt-5 max-w-prose leading-relaxed text-ink-soft">
                   {result.tier
-                    ? 'Every Mandatory criterion is answered met. The level above reflects how many Recommended criteria you also evidenced. The assessment team verifies all of it independently.'
-                    : `You answered ${result.mandatoryMet} of ${MANDATORY_TOTAL} Mandatory criteria as met. Any unmet Mandatory criterion blocks certification at every level — these are the ones to close first.`}
+                    ? 'Every Mandatory criterion is answered met. The level above reflects how many Recommended criteria you also evidenced, and is confirmed through verification.'
+                    : `You answered ${result.mandatoryMet} of ${MANDATORY_TOTAL} Mandatory criteria as met — which is where most schools start. These are the gaps we would plan and work through with you.`}
                 </p>
 
                 <dl className="mt-8 grid grid-cols-2 gap-px border border-rule bg-rule sm:max-w-md">
@@ -193,7 +193,7 @@ export default function SelfAssessment() {
                 {result.gaps.length ? (
                   <div className="mt-9">
                     <p className="font-mono text-[0.6rem] uppercase tracking-[0.18em] text-gold-ink">
-                      Where evidence is missing
+                      Where we would start
                     </p>
                     <ul className="mt-4 space-y-2.5">
                       {result.gaps.map((g) => (
@@ -216,17 +216,17 @@ export default function SelfAssessment() {
                 ) : (
                   <p className="mt-9 text-[0.9rem] leading-relaxed text-ink-soft">
                     You answered every criterion as met with evidence. Bring that
-                    documentation to an application and the assessment team will
-                    verify it.
+                    documentation to a first conversation and we will move
+                    straight to verification.
                   </p>
                 )}
 
                 <div className="mt-10 flex flex-wrap gap-3">
                   <Link
-                    href="/apply"
+                    href="/contact"
                     className="inline-flex items-center bg-ink px-6 py-3.5 font-mono text-[0.68rem] uppercase tracking-[0.16em] text-paper transition-colors hover:bg-gold-ink"
                   >
-                    Apply for Certification
+                    Talk to Us About the Gaps
                   </Link>
                   <button
                     type="button"

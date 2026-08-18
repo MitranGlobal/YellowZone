@@ -5,12 +5,11 @@ const ROUTES = [
   '',
   '/what-is-yellowzone',
   '/criteria',
-  '/get-certified',
   '/why-certify',
   '/certified-schools',
   '/about',
   '/resources',
-  '/apply',
+  '/contact',
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

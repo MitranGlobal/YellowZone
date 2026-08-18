@@ -30,10 +30,10 @@ const RECOGNITION = [
 ];
 
 const PATH = [
-  ['Apply', 'Register your school and nominate a coordinator.'],
-  ['Evidence', 'Submit documentation against each criterion.'],
-  ['Verify', 'Our assessment team reviews evidence and data, and conducts verification.'],
-  ['Certify', `Meet both gates and your school is awarded YellowZone Certification, valid for ${SITE.validity}.`],
+  ['Talk', 'Tell us about your school. Nothing to prepare, nothing to submit.'],
+  ['Review', 'We walk the thirteen criteria with you and establish where you stand today.'],
+  ['Build', 'We plan the gaps and work alongside you to close them — policy, training, measurement, interventions.'],
+  ['Certify', `Once the criteria are genuinely met and verified, your school is certified for ${SITE.validity}.`],
 ];
 
 export default function HomePage() {
@@ -148,18 +148,18 @@ export default function HomePage() {
         <div className="shell grid gap-16 lg:grid-cols-[1fr_1.2fr]">
           <Reveal>
             <SectionHeading
-              eyebrow="The path"
-              title="Four steps to certification"
+              eyebrow="How it works"
+              title="We don’t test your school. We help you get there."
               lede={
                 <p>
-                  Roughly {SITE.decisionDays} from application to decision,
-                  depending on how quickly evidence arrives and any gaps are
-                  closed.
+                  Schools are not expected to meet the criteria before they
+                  contact us. We establish where you stand, plan the gaps, and
+                  support the work to close them.
                 </p>
               }
             />
             <div className="mt-9">
-              <ArrowLink href="/get-certified">See the full process</ArrowLink>
+              <ArrowLink href="/contact">See how it goes</ArrowLink>
             </div>
           </Reveal>
 
@@ -272,13 +272,13 @@ export default function HomePage() {
               The ones that certify first will be the ones parents remember.
             </p>
             <div className="mt-11 flex flex-wrap gap-3.5">
-              <Button href="/apply">Apply for Certification</Button>
+              <Button href="/contact">Talk to Us</Button>
               <Button href="/resources" variant="secondary">
                 Download the Criteria
               </Button>
             </div>
             <p className="mt-8 text-[0.87rem] text-ink-mute">
-              Not ready to apply?{' '}
+              Want to look first?{' '}
               <Link
                 href="/resources#self-assessment"
                 className="link-underline text-ink"
