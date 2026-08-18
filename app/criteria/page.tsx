@@ -4,6 +4,7 @@ import SectionHeading from '@/components/ui/SectionHeading';
 import Reveal from '@/components/ui/Reveal';
 import Button from '@/components/ui/Button';
 import CriteriaExplorer from '@/components/criteria/CriteriaExplorer';
+import SelfAssessment from '@/components/quiz/SelfAssessment';
 import { PILLARS } from '@/lib/criteria';
 
 export const metadata: Metadata = {
@@ -26,9 +27,7 @@ export default function CriteriaPage() {
             profile and set the level awarded.
           </p>
         }
-      >
-        <Button href="/resources">Download the criteria (PDF)</Button>
-      </PageHero>
+      />
 
       {/* Pillar principles */}
       <section className="border-b border-rule py-section">
@@ -99,26 +98,48 @@ export default function CriteriaPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-section">
+      {/* Self-assessment */}
+      <section
+        id="self-assessment"
+        className="scroll-mt-24 border-b border-rule py-section"
+      >
         <div className="shell">
           <Reveal>
             <SectionHeading
-              title="See where your school already stands."
+              eyebrow="Self-assessment"
+              title="See where your school already stands"
               lede={
                 <p>
-                  The self-assessment walks the same thirteen criteria and shows
-                  you which ones you can already evidence.
+                  Thirteen questions, one per criterion. Nothing is submitted —
+                  answers stay in your browser, and the result is indicative
+                  only, not a certification decision.
                 </p>
               }
             />
-            <div className="mt-9 flex flex-wrap gap-3">
-              <Button href="/resources#self-assessment">
-                Start the self-assessment
-              </Button>
-              <Button href="/contact" variant="secondary">
-                Apply for certification
-              </Button>
+          </Reveal>
+
+          <Reveal variant="fade" className="mt-14">
+            <SelfAssessment />
+          </Reveal>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="bg-parchment py-section">
+        <div className="shell">
+          <Reveal>
+            <SectionHeading
+              title="Not where you hoped? That is where we start."
+              lede={
+                <p>
+                  Schools are not expected to meet these criteria before they
+                  contact us. We establish where you stand, plan the gaps, and
+                  work through them with you.
+                </p>
+              }
+            />
+            <div className="mt-9">
+              <Button href="/contact">Talk to Us</Button>
             </div>
           </Reveal>
         </div>

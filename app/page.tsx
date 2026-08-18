@@ -273,14 +273,14 @@ export default function HomePage() {
             </p>
             <div className="mt-11 flex flex-wrap gap-3.5">
               <Button href="/contact">Talk to Us</Button>
-              <Button href="/resources" variant="secondary">
-                Download the Criteria
+              <Button href="/criteria" variant="secondary">
+                See the Criteria
               </Button>
             </div>
             <p className="mt-8 text-[0.87rem] text-ink-mute">
               Want to look first?{' '}
               <Link
-                href="/resources#self-assessment"
+                href="/criteria#self-assessment"
                 className="link-underline text-ink"
               >
                 Run the self-assessment
