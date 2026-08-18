@@ -57,15 +57,19 @@ export default function WhatIsPage() {
               lede={
                 <>
                   <p>
-                    YellowZone is positioned the way LEED represents green and
-                    sustainable buildings, or NABH represents quality standards
-                    in hospitals: a school earns it by demonstrating real
-                    practice, evidenced and verified — not by purchasing a
-                    service or completing a single test.
+                    YellowZone is an accreditation, not a product. A school
+                    earns it by demonstrating real practice across thirteen
+                    defined criteria — documented, evidenced and verified — not
+                    by purchasing a service or completing a single test.
+                  </p>
+                  <p>
+                    Every criterion states three things: what the school must
+                    have, what evidence it must show, and how that evidence is
+                    checked. Nothing is awarded on intent.
                   </p>
                   <p className="text-ink">
-                    That distinction is the whole point. A standard is only worth
-                    having if it can be failed.
+                    That is the whole point. A mark that could not be withheld
+                    would tell a parent nothing.
                   </p>
                 </>
               }

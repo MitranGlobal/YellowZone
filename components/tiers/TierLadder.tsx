@@ -28,8 +28,8 @@ const ITEMS = TIERS.map((t) => ({
 /**
  * The certification ladder. Every tier clears the same Mandatory gate; the
  * award level is then set by how many Recommended criteria the school also
- * evidences — the same two-stage shape LEED uses, where prerequisites are
- * pass/fail and points alone decide the level.
+ * evidences. The gate decides whether a school is certified at all; the
+ * Recommended count decides only the level.
  */
 export default function TierLadder() {
   const openAt = useLightbox((s) => s.openAt);

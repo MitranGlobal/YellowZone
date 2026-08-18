@@ -2,9 +2,12 @@
 
 **The Emotional Wellness Standard for Schools** — a certification site for MiTran Global.
 
-Structured after [LEED](https://www.usgbc.org/leed): a published standard with
-named criteria, an evidence-and-verification process, tiered levels of award,
-and a public register of certified institutions.
+A published standard with named criteria, an evidence-and-verification process,
+tiered levels of award, and a public register of certified schools.
+
+**Copy rule:** YellowZone is defined on its own terms. Do not describe it by
+comparison to other certification schemes anywhere in site copy — no "like X for
+Y" framing. State what the standard contains and how it is verified.
 
 ---
 
@@ -180,9 +183,9 @@ and it is the single thing most likely to stop CBSE/ICSE boards, a partner like
 the Live Love Laugh Foundation, or a discerning parent from treating the seal as
 meaningful.
 
-For contrast: USGBC writes LEED, but **GBCI** — a separate body — reviews and
-awards it, and LEED consultants are explicitly not the reviewers. NABH accredits;
-it does not sell hospitals the fix.
+Established accreditation schemes handle this by separating the function that
+advises from the function that awards — often into distinct legal entities, and
+at minimum into distinct people who never work the same school.
 
 This is not a reason to abandon the consultative model, which is genuinely the
 right call for a market where almost no school could self-certify today. It is a
@@ -208,10 +211,10 @@ placeholder to delete.
    Recommended) · Silver (3) · Gold (4+) — all on top of the full Mandatory
    gate. Bronze and Platinum are defined but held back. **Set thresholds in
    `lib/tiers.ts`.**
-2. **Contact details are placeholder.** `SITE.phone`, `SITE.whatsapp` and
-   `SITE.address` in `lib/site.ts` are dummy values. These are now the *only*
-   route into the programme — there is no form — so they must be real and
-   monitored before launch.
+2. **Confirm the office address and published hours.** `SITE.address` and
+   `SITE.hours` in `lib/site.ts` are still assumed. Email and both phone lines
+   are live values. These are the *only* route into the programme — there is no
+   form — so the inbox and both lines must be monitored.
 3. **Testimonials are placeholder.** `components/home/Testimonials.tsx` contains
    unattributed sample quotes, labelled as such in the file. Replace with
    signed, permissioned quotes from the first certified cohort — or remove the

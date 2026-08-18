@@ -13,6 +13,8 @@ export const metadata: Metadata = {
     'Talk to the YellowZone team about certifying your school. No form, no application — call or write and we will take it from there.',
 };
 
+const tel = (n: string) => `tel:${n.replace(/[^\d+]/g, '')}`;
+
 const CHANNELS = [
   {
     label: 'Email',
@@ -21,16 +23,16 @@ const CHANNELS = [
     note: `We reply within ${SITE.responseTime}.`,
   },
   {
-    label: 'Phone',
-    value: SITE.phoneDisplay,
-    href: `tel:${SITE.phone.replace(/\s/g, '')}`,
+    label: 'Call us',
+    value: SITE.phonePrimary,
+    href: tel(SITE.phonePrimary),
     note: SITE.hours,
   },
   {
-    label: 'WhatsApp',
-    value: SITE.whatsapp,
-    href: `https://wa.me/${SITE.whatsapp.replace(/[^\d]/g, '')}`,
-    note: 'For quick questions.',
+    label: 'Alternate line',
+    value: SITE.phoneSecondary,
+    href: tel(SITE.phoneSecondary),
+    note: 'If the first line is engaged.',
   },
 ];
 

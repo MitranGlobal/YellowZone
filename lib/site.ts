@@ -5,12 +5,12 @@ export const SITE = {
   url: 'https://yellowzone.org',
 
   // ─── CONTACT DETAILS ───
-  // [OPEN ITEM] Replace with the real numbers before launch. These are the
-  // only route into the programme now, so they must be monitored.
-  email: 'certification@mitranglobal.com',
-  phone: '+91 00000 00000',
-  phoneDisplay: '+91 00000 00000',
-  whatsapp: '+91 00000 00000',
+  // These are the only route into the programme — there is no application
+  // form — so both lines and the inbox must be monitored.
+  email: 'yellowzone@mitranglobal.com',
+  phonePrimary: '+91 74832 60618',
+  phoneSecondary: '+91 74832 59966',
+  // [OPEN ITEM] Confirm the office address and published hours.
   address: 'MiTran Global, Chennai, Tamil Nadu, India',
   hours: 'Monday – Friday, 9:30am – 6:00pm IST',
 

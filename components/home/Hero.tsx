@@ -3,6 +3,8 @@
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
 import Button from '@/components/ui/Button';
+import { MANDATORY_COUNT, RECOMMENDED_COUNT } from '@/lib/criteria';
+import { TIERS } from '@/lib/tiers';
 
 const HeroScene = dynamic(() => import('@/components/three/HeroScene'), {
   ssr: false,
@@ -65,28 +67,28 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Positioning strip — the standard's peer group, stated plainly. */}
+      {/* What the standard is made of, stated plainly. */}
       <div className="relative z-10 border-t border-rule bg-paper/85 backdrop-blur-sm">
         <div className="shell grid divide-y divide-rule py-3 sm:grid-cols-3 sm:divide-x sm:divide-y-0">
           {[
-            ['LEED', 'certifies sustainable buildings'],
-            ['NABH', 'certifies quality in hospitals'],
-            ['YellowZone', 'certifies emotional wellness in schools'],
-          ].map(([mark, claim], i) => (
+            ['5 Pillars', 'governance, measurement, capability, academics, culture'],
+            [
+              `${MANDATORY_COUNT + RECOMMENDED_COUNT} Criteria`,
+              `${MANDATORY_COUNT} mandatory, ${RECOMMENDED_COUNT} recommended`,
+            ],
+            [
+              `${TIERS.length} Levels`,
+              TIERS.map((t) => t.name).join(', ').toLowerCase(),
+            ],
+          ].map(([mark, claim]) => (
             <p
               key={mark}
-              className={`flex flex-wrap items-baseline gap-x-2.5 gap-y-1 py-4 sm:px-6 sm:first:pl-0 sm:last:pr-0 ${
-                i === 2 ? 'text-ink' : 'text-ink-mute'
-              }`}
+              className="flex flex-wrap items-baseline gap-x-2.5 gap-y-1 py-4 text-ink sm:px-6 sm:first:pl-0 sm:last:pr-0"
             >
-              <span
-                className={`font-mono text-[0.72rem] uppercase tracking-[0.14em] ${
-                  i === 2 ? 'text-gold-ink' : 'text-ink-soft'
-                }`}
-              >
+              <span className="font-mono text-[0.72rem] uppercase tracking-[0.14em] text-gold-ink">
                 {mark}
               </span>
-              <span className="text-[0.87rem]">{claim}</span>
+              <span className="text-[0.87rem] text-ink-soft">{claim}</span>
             </p>
           ))}
         </div>
