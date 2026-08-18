@@ -14,10 +14,9 @@ const WEIGHTS: { key: WeightFilter; label: string }[] = [
 ];
 
 /**
- * The criteria library. Structured after the LEED credit library: filter by
- * category and by whether the item is a prerequisite or a scoring credit,
- * then open any single criterion to read its requirement, the evidence the
- * school submits, and how that evidence is verified.
+ * The criteria library. Filter by pillar and by weight, then open any single
+ * criterion to read its requirement, the evidence the school submits, and how
+ * that evidence is verified.
  */
 export default function CriteriaExplorer() {
   const [pillar, setPillar] = useState<PillarFilter>('all');

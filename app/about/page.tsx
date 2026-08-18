@@ -100,9 +100,9 @@ export default function AboutPage() {
                   <p>
                     YellowZone certification is the first layer of a wider
                     programme we call Positivity Hubs: a national and regional
-                    emotional wellbeing standard for schools, benchmarked in the
-                    spirit of NABH for healthcare quality and LEED for
-                    sustainable buildings.
+                    emotional wellbeing standard for schools, with a common
+                    body of criteria, a common method of verification, and a
+                    public register of the schools that meet it.
                   </p>
                   <p>
                     Schools are assessed. High-performing schools are studied.
@@ -206,7 +206,7 @@ export default function AboutPage() {
               </p>
             </div>
             <div className="mt-10 flex flex-wrap gap-3">
-              <Button href="/apply">Partner with us</Button>
+              <Button href="/contact">Partner with us</Button>
               <Button href="/criteria" variant="secondary">
                 See the criteria
               </Button>

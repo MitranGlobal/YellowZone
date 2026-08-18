@@ -88,10 +88,10 @@ export default function Nav() {
 
         <div className="flex items-center gap-3">
           <Link
-            href="/apply"
+            href="/contact"
             className="hidden border border-ink bg-ink px-5 py-3 font-mono text-[0.66rem] uppercase tracking-[0.16em] text-paper transition-colors hover:border-gold-ink hover:bg-gold-ink sm:inline-flex"
           >
-            Apply Now
+            Talk to Us
           </Link>
 
           <button
@@ -152,10 +152,10 @@ export default function Nav() {
                 </motion.div>
               ))}
               <Link
-                href="/apply"
+                href="/contact"
                 className="mt-5 inline-flex items-center justify-center bg-ink px-6 py-4 font-mono text-[0.68rem] uppercase tracking-[0.16em] text-paper"
               >
-                Apply for Certification
+                Talk to Us
               </Link>
             </nav>
           </motion.div>

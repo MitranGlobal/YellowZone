@@ -8,7 +8,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 /**
  * Mobile-only conversion rail. Held back until the reader is past the hero so
  * it never competes with the primary call to action, and suppressed on the
- * apply page where it would point at the page you are already on.
+ * contact page where it would point at the page you are already on.
  */
 export default function StickyCta() {
   const [show, setShow] = useState(false);
@@ -21,7 +21,7 @@ export default function StickyCta() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  const suppressed = pathname === '/apply';
+  const suppressed = pathname === '/contact';
 
   return (
     <AnimatePresence>
@@ -35,10 +35,10 @@ export default function StickyCta() {
           style={{ paddingBottom: 'calc(0.75rem + env(safe-area-inset-bottom))' }}
         >
           <Link
-            href="/apply"
+            href="/contact"
             className="flex w-full items-center justify-center bg-ink px-6 py-4 font-mono text-[0.68rem] uppercase tracking-[0.16em] text-paper"
           >
-            Apply for Certification
+            Talk to Us
           </Link>
         </motion.div>
       ) : null}

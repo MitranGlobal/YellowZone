@@ -19,7 +19,7 @@ const NOT = [
   },
   {
     title: 'It is not a workshop or a training package.',
-    body: 'Training is something the school must already be doing. We verify that it happened; we do not sell it as the certification.',
+    body: 'We support training as part of getting a school to the standard, but the certification is the verified outcome — not the sessions delivered along the way.',
   },
   {
     title: 'It is not permanent.',
@@ -27,7 +27,7 @@ const NOT = [
   },
   {
     title: 'It is not a paid badge.',
-    body: 'Schools that miss the Mandatory gate are not certified, whatever they have paid to be assessed.',
+    body: 'We help schools reach the standard — but the seal is only issued once the Mandatory criteria are genuinely met and verified. A mark that could not be withheld would signal nothing.',
   },
 ];
 
@@ -57,15 +57,19 @@ export default function WhatIsPage() {
               lede={
                 <>
                   <p>
-                    YellowZone is positioned the way LEED represents green and
-                    sustainable buildings, or NABH represents quality standards
-                    in hospitals: a school earns it by demonstrating real
-                    practice, evidenced and verified — not by purchasing a
-                    service or completing a single test.
+                    YellowZone is an accreditation, not a product. A school
+                    earns it by demonstrating real practice across thirteen
+                    defined criteria — documented, evidenced and verified — not
+                    by purchasing a service or completing a single test.
+                  </p>
+                  <p>
+                    Every criterion states three things: what the school must
+                    have, what evidence it must show, and how that evidence is
+                    checked. Nothing is awarded on intent.
                   </p>
                   <p className="text-ink">
-                    That distinction is the whole point. A standard is only worth
-                    having if it can be failed.
+                    That is the whole point. A mark that could not be withheld
+                    would tell a parent nothing.
                   </p>
                 </>
               }
@@ -105,7 +109,7 @@ export default function WhatIsPage() {
           <Reveal>
             <SectionHeading
               eyebrow="Levels of award"
-              title="One gate, five levels"
+              title="One gate, three levels"
               lede={
                 <p>
                   Clearing the Mandatory gate is what makes a school certified.

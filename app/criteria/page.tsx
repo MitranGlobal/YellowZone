@@ -189,8 +189,9 @@ export default function CriteriaPage() {
 
           <Reveal className="mt-12">
             <p className="font-mono text-[0.68rem] uppercase tracking-[0.12em] text-ink-mute">
-              Outcomes: Certified · Certification deferred (remediation plan
-              issued) · Not certified (may re-apply in a future cycle)
+              Schools are not expected to arrive meeting these criteria. We
+              establish where you stand, plan the gaps, and support the work —
+              certification follows once the criteria are genuinely met.
             </p>
           </Reveal>
 
@@ -217,7 +218,7 @@ export default function CriteriaPage() {
               <Button href="/resources#self-assessment">
                 Start the self-assessment
               </Button>
-              <Button href="/apply" variant="secondary">
+              <Button href="/contact" variant="secondary">
                 Apply for certification
               </Button>
             </div>

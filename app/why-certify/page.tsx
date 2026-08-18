@@ -119,7 +119,7 @@ export default function WhyCertifyPage() {
               }
             />
             <div className="mt-9 flex flex-wrap gap-3">
-              <Button href="/apply">Apply for certification</Button>
+              <Button href="/contact">Talk to us</Button>
               <Button href="/criteria" variant="secondary">
                 See the criteria
               </Button>
