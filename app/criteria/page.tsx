@@ -4,8 +4,7 @@ import SectionHeading from '@/components/ui/SectionHeading';
 import Reveal from '@/components/ui/Reveal';
 import Button from '@/components/ui/Button';
 import CriteriaExplorer from '@/components/criteria/CriteriaExplorer';
-import TierLadder from '@/components/tiers/TierLadder';
-import { PILLARS, MANDATORY_COUNT, RECOMMENDED_COUNT } from '@/lib/criteria';
+import { PILLARS } from '@/lib/criteria';
 
 export const metadata: Metadata = {
   title: 'The YellowZone Criteria',
@@ -31,56 +30,8 @@ export default function CriteriaPage() {
         <Button href="/resources">Download the criteria (PDF)</Button>
       </PageHero>
 
-      {/* Pillar overview */}
-      <section className="border-b border-rule py-section">
-        <div className="shell">
-          <Reveal>
-            <SectionHeading eyebrow="Overview" title="How the standard is organised" />
-          </Reveal>
-
-          <Reveal variant="stagger" as="ul" className="mt-12 border-t border-rule">
-            {PILLARS.map((p) => {
-              const mandatory = p.criteria.filter(
-                (c) => c.weight === 'Mandatory'
-              ).length;
-              const recommended = p.criteria.length - mandatory;
-              return (
-                <li
-                  key={p.letter}
-                  className="grid gap-x-10 gap-y-4 border-b border-rule py-8 lg:grid-cols-[3rem_1.1fr_1.3fr_11rem]"
-                >
-                  <span className="font-mono text-[0.95rem] text-gold-ink">
-                    {p.letter}
-                  </span>
-
-                  <h3 className="font-display text-[1.25rem] leading-snug tracking-tight text-ink">
-                    {p.name}
-                  </h3>
-
-                  <p className="text-[0.9rem] leading-relaxed text-ink-soft">
-                    {p.focus}
-                  </p>
-
-                  <p className="font-mono text-[0.65rem] uppercase leading-relaxed tracking-[0.1em] text-ink-mute lg:text-right">
-                    {mandatory} mandatory
-                    {recommended ? ` · ${recommended} recommended` : ''}
-                  </p>
-                </li>
-              );
-            })}
-          </Reveal>
-
-          <Reveal className="mt-8">
-            <p className="font-mono text-[0.68rem] uppercase tracking-[0.12em] text-ink-mute">
-              {MANDATORY_COUNT} mandatory · {RECOMMENDED_COUNT} recommended ·{' '}
-              {MANDATORY_COUNT + RECOMMENDED_COUNT} criteria total
-            </p>
-          </Reveal>
-        </div>
-      </section>
-
       {/* Pillar principles */}
-      <section className="border-b border-rule bg-parchment py-section">
+      <section className="border-b border-rule py-section">
         <div className="shell">
           <Reveal>
             <SectionHeading
@@ -113,7 +64,7 @@ export default function CriteriaPage() {
       </section>
 
       {/* Explorer */}
-      <section id="library" className="border-b border-rule py-section">
+      <section id="library" className="border-b border-rule bg-parchment py-section">
         <div className="shell">
           <Reveal>
             <SectionHeading
@@ -145,59 +96,6 @@ export default function CriteriaPage() {
               </aside>
             </Reveal>
           ))}
-        </div>
-      </section>
-
-      {/* Thresholds */}
-      <section className="border-b border-rule bg-parchment py-section">
-        <div className="shell">
-          <Reveal>
-            <SectionHeading
-              eyebrow="Thresholds"
-              title="Two gates decide the outcome"
-            />
-          </Reveal>
-
-          <Reveal variant="stagger" as="ul" className="mt-12 grid gap-px bg-rule md:grid-cols-2">
-            <li className="bg-paper p-8">
-              <p className="font-mono text-[0.62rem] uppercase tracking-[0.16em] text-gold-ink">
-                Gate 1 — Mandatory
-              </p>
-              <p className="mt-4 font-display text-[1.3rem] leading-snug tracking-tight text-ink">
-                All {MANDATORY_COUNT} Mandatory criteria met in full.
-              </p>
-              <p className="mt-4 text-[0.88rem] leading-relaxed text-ink-soft">
-                Any unmet Mandatory criterion blocks certification until it is
-                remediated. There is no partial credit and no level at which a
-                school can be certified without clearing this gate.
-              </p>
-            </li>
-            <li className="bg-paper p-8">
-              <p className="font-mono text-[0.62rem] uppercase tracking-[0.16em] text-gold-ink">
-                Gate 2 — Recommended
-              </p>
-              <p className="mt-4 font-display text-[1.3rem] leading-snug tracking-tight text-ink">
-                How many of {RECOMMENDED_COUNT} Recommended criteria are met.
-              </p>
-              <p className="mt-4 text-[0.88rem] leading-relaxed text-ink-soft">
-                This does not decide whether a school is certified — it decides
-                the level it is certified at, from Certified through to
-                Platinum.
-              </p>
-            </li>
-          </Reveal>
-
-          <Reveal className="mt-12">
-            <p className="font-mono text-[0.68rem] uppercase tracking-[0.12em] text-ink-mute">
-              Schools are not expected to arrive meeting these criteria. We
-              establish where you stand, plan the gaps, and support the work —
-              certification follows once the criteria are genuinely met.
-            </p>
-          </Reveal>
-
-          <div className="mt-16">
-            <TierLadder />
-          </div>
         </div>
       </section>
 
