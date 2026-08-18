@@ -8,7 +8,6 @@ const ROUTES = [
   '/why-certify',
   '/certified-schools',
   '/about',
-  '/resources',
   '/contact',
 ];
 

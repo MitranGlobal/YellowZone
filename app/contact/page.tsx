@@ -5,6 +5,7 @@ import SectionHeading from '@/components/ui/SectionHeading';
 import Reveal from '@/components/ui/Reveal';
 import ArrowLink from '@/components/ui/ArrowLink';
 import ProcessTimeline from '@/components/home/ProcessTimeline';
+import FaqAccordion from '@/components/ui/FaqAccordion';
 import { PREPARE, SITE } from '@/lib/site';
 
 export const metadata: Metadata = {
@@ -110,7 +111,7 @@ export default function ContactPage() {
               }
             />
             <div className="mt-9">
-              <ArrowLink href="/resources#self-assessment">
+              <ArrowLink href="/criteria#self-assessment">
                 Or see where you stand first
               </ArrowLink>
             </div>
@@ -160,12 +161,24 @@ export default function ContactPage() {
               Timings depend entirely on where your school starts. A school with
               a counsellor, a policy and training records already in place may
               be certified within a term. A school building from scratch should
-              expect an academic year.{' '}
-              <Link href="/resources#faq" className="link-underline">
-                More questions answered
-              </Link>
-              .
+              expect an academic year.
             </p>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section
+        id="faq"
+        className="scroll-mt-24 border-t border-rule bg-parchment py-section"
+      >
+        <div className="shell">
+          <Reveal>
+            <SectionHeading eyebrow="FAQ" title="Questions schools ask" />
+          </Reveal>
+
+          <Reveal variant="fade" className="mt-14">
+            <FaqAccordion />
           </Reveal>
         </div>
       </section>

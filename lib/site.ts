@@ -40,11 +40,11 @@ export const FOOTER = [
     ],
   },
   {
-    heading: 'Resources',
+    heading: 'For Schools',
     links: [
-      { label: 'Criteria Document (PDF)', href: '/resources' },
-      { label: 'Where Your School Stands', href: '/resources#self-assessment' },
-      { label: 'FAQ', href: '/resources#faq' },
+      { label: 'The Criteria', href: '/criteria' },
+      { label: 'Where Your School Stands', href: '/criteria#self-assessment' },
+      { label: 'FAQ', href: '/contact#faq' },
     ],
   },
   {
@@ -179,33 +179,7 @@ export const FAQS = [
   },
   {
     q: 'Our school already has a counsellor and runs wellness programs. Where do we stand?',
-    a: 'Likely further along than you think. Work through the criteria on the Resources page to see for yourself, then bring us what you find.',
+    a: 'Likely further along than you think. Work through the self-assessment on the Criteria page to see for yourself, then bring us what you find.',
   },
 ];
 
-export const DOWNLOADS = [
-  {
-    title: 'YellowZone Criteria',
-    detail:
-      'The full 13-criterion standard with evidence and verification requirements.',
-    meta: 'PDF · 5 pillars',
-  },
-  {
-    title: 'School Readiness Checklist',
-    detail:
-      'Work through all 13 criteria offline to see where your school already stands before the first conversation.',
-    meta: 'PDF · 4 pages',
-  },
-  {
-    title: 'Emotional Wellness Policy Template',
-    detail:
-      'A drafting template for Criterion A2, covering commitment, procedure and escalation.',
-    meta: 'DOCX · editable',
-  },
-  {
-    title: 'Programme Overview for Leadership',
-    detail:
-      'A short brief for management committees and trustees on what the programme involves.',
-    meta: 'PDF · issued on request',
-  },
-];

@@ -178,7 +178,7 @@ export default function WhatIsPage() {
           </Reveal>
 
           <Reveal className="mt-12">
-            <ArrowLink href="/resources#self-assessment">
+            <ArrowLink href="/criteria#self-assessment">
               Start your self-assessment
             </ArrowLink>
           </Reveal>
